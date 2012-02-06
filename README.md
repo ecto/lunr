@@ -35,15 +35,15 @@ All configuration is stored in `config.json`.
 
 ##API
 
-###GET /:id
+####GET /:id
 
-###PUT /:id
+####PUT /:id
 
-###DELETE /:id
+####DELETE /:id
 
-###GET /search
+####GET /search/:query
 
-###GET /similar/:id
+####GET /similar/:id
 
 ##License
 
