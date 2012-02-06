@@ -1,0 +1,16 @@
+{
+  "author": "Cam Pedersen <diffference@gmail.com> (http://campedersen.com/)",
+  "name": "lunr",
+  "description": "RESTful full-text indexer, searcher, and recommendation engine",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Lulo/lunr.git"
+  },
+  "main": "lib/lunr.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
