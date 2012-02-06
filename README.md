@@ -10,11 +10,12 @@ A RESTful full-text indexer, searcher, and recommendation engine.
 
 ##Start
 
-    ./bin/start.sh
+    cp config-default.json config.json
+    bin/start.sh
 
 ##Configuration
 
-All configuration is stored in `config.json`. 
+All configuration is stored in `config.json`. This is the default configuration:
 
 ````json
 {
