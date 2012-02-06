@@ -33,6 +33,18 @@ All configuration is stored in `config.json`.
 
 ##How it works
 
+##API
+
+###GET /:id
+
+###PUT /:id
+
+###DELETE /:id
+
+###GET /search
+
+###GET /similar/:id
+
 ##License
 
 MIT Onswipe
