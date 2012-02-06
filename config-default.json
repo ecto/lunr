@@ -1,6 +1,7 @@
 {
   "port": 6969,
-  "chache": false,
+  "cache": false,
+  "ttl": null,
   "mongo": {
     "host": "localhost",
     "port": 27017,
