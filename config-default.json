@@ -1,0 +1,14 @@
+{
+  "port": 6969,
+  "chache": false,
+  "mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "db": "test",
+    "collection": "test"
+  },
+  "redis": {
+    "host": "localhost",
+    "post": 6379
+  }
+}
