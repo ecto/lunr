@@ -22,7 +22,9 @@ All configuration is stored in `config.json`.
   chache: false,
   mongo: {
     host: 'localhost',
-    port: 27017
+    port: 27017,
+    db: 'test',
+    collection: 'test'
   },
   redis: {
     host: 'localhost',
