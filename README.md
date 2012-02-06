@@ -18,17 +18,18 @@ All configuration is stored in `config.json`.
 
 ````json
 {
-  port: 6969,
-  chache: false,
-  mongo: {
-    host: 'localhost',
-    port: 27017,
-    db: 'test',
-    collection: 'test'
+  "port": 6969,
+  "cache": false,
+  "ttl": null,
+  "mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "db": "test",
+    "collection": "test"
   },
-  redis: {
-    host: 'localhost',
-    post: 6379
+  "redis": {
+    "host": "localhost",
+    "post": 6379
   }
 }
 ````
