@@ -6,12 +6,13 @@ A RESTful full-text indexer, searcher, and recommendation engine.
 
 ##Install
 
-    git clone this
+    npm install lunr -g
 
 ##Start
 
+    npm explore lunr
     cp config-default.json config.json
-    bin/start.sh
+    lunrd start
 
 ##Configuration
 
