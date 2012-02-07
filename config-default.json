@@ -2,11 +2,12 @@
   "port": 6969,
   "cache": false,
   "ttl": null,
+  "cluster": true,
+  "queue": false,
   "mongo": {
     "host": "localhost",
     "port": 27017,
-    "db": "lunr",
-    "collection": "lunr"
+    "database": "lunr",
   },
   "redis": {
     "host": "localhost",
