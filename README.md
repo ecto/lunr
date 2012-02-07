@@ -21,14 +21,14 @@ All configuration is stored in `config.json`. This is the default configuration:
 ````json
 {
   "port": 6969,    // accept REST requests on this port
-  "cache": false,  // enable Redis caching of GET requests
-  "ttl": null,     // cache TTL in milliseconds
+  "cache": false,  // enable Redis caching of GET requests?
+  "ttl": null,     // cache TTL in milliseconds [default 60000]
   "cluster": true, // spawn up a server worker for each CPU?
+  "queue": false,  // use Redis as a FIFO queue for PUT commands?
   "mongo": {
     "host": "localhost",
     "port": 27017,
-    "db": "test",
-    "collection": "test"
+    "database": "test"
   },
   "redis": {
     "host": "localhost",
@@ -89,13 +89,11 @@ Insert a document into the index.
     -d '{"_id": "myID", "title": "my title", "content": "blah blah blah"}' \
     http://localhost:6969/
 
-
 ####DELETE /:id
 
 Unindex a document.
 
     curl -i -X DELETE http://localhost:6969/myID
-
 
 ####GET /search/:query
 
