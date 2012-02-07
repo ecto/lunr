@@ -17,7 +17,8 @@
   "dependencies": {
     "mongojs": "*",
     "optimist": "*",
-    "request": "*"
+    "request": "*",
+    "natural": "*"
   },
   "devDependencies": {}
 }
