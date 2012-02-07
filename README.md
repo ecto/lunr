@@ -80,13 +80,13 @@ Grab the full document from the index.
 
     curl http://localhost:6969/myID
 
-####PUT /:id
+####PUT /
 
 Insert a document into the index.
 
     curl -i -X PUT \
-    -d '{title: "my title", content: "blah blah blah"}' \
-    http://localhost/myID
+    -d '{"_id": "myID", "title": "my title", "content": "blah blah blah"}' \
+    http://localhost:6969/
 
 
 ####DELETE /:id
