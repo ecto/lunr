@@ -5,8 +5,8 @@
   "mongo": {
     "host": "localhost",
     "port": 27017,
-    "db": "test",
-    "collection": "test"
+    "db": "lunr",
+    "collection": "lunr"
   },
   "redis": {
     "host": "localhost",
