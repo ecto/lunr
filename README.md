@@ -108,6 +108,26 @@ Run a similarity query against the index by ID.
 
     curl http://localhost:6969/similary/myID
 
+##Node convenience wrapper client
+
+    npm install lunr
+
+
+````javascript
+var lunr = require('lunr');
+
+var client = new lunr({
+  host: 'localhost',
+  port: 6969
+});
+
+client.get('myID', console.log);
+client.put(doc, console.log);
+client.del('myID', console.log);
+client.search('blah blah', console.log);
+client.similar('myID', console.log);
+````
+
 ##License
 
 MIT Onswipe
