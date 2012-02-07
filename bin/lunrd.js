@@ -7,6 +7,8 @@
 
 var cluster = require('cluster');
 var numCPUs = require('os').cpus().length;
+var optimist = require('optimist');
+var argv = optimist.argv;
 
 if (cluster.isMaster) {
   for (var i = 0; i < numCPUs; i++) {
@@ -18,5 +20,8 @@ if (cluster.isMaster) {
   });
 } else {
   var app = require(__dirname + '/../lib/server/app.js');
+  if (argv.v) {
+    app.use(express.logger());
+  }
   app.listen(6969);
 }
