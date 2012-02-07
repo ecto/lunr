@@ -20,9 +20,10 @@ All configuration is stored in `config.json`. This is the default configuration:
 
 ````json
 {
-  "port": 6969,
-  "cache": false,
-  "ttl": null,
+  "port": 6969,    // accept REST requests on this port
+  "cache": false,  // enable Redis caching of GET requests
+  "ttl": null,     // cache TTL in milliseconds
+  "cluster": true, // spawn up a server worker for each CPU?
   "mongo": {
     "host": "localhost",
     "port": 27017,
@@ -98,9 +99,9 @@ Unindex a document.
 
 ####GET /search/:query
 
-Run a lexical similarity query against the index.
+Run a lexical similarity query against the index. `:query` must be URL encoded.
 
-    curl http://localhost:6969/search/hello+world
+    curl http://localhost:6969/search/hello%20world
 
 ####GET /similar/:id
 
