@@ -39,7 +39,7 @@ All configuration is stored in `config.json`. This is the default configuration:
 ##How it works
 
 When a PUT command is issued against `lunrd`, it is put into a FIFO queue (stored in Redis).
-This allows Lunr nodes to be load balanced. Each will process keys as it is able too,
+This allows Lunr nodes to be load balanced. Each will process keys as it is able to,
 responding to other commands first (GETs and DELETEs take precedence over PUTs).
 
 Every piece of content PUT into Lunr will be stemmed and subsequestly indexed.
