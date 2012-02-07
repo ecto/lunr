@@ -47,7 +47,7 @@ Lunr will store all documents in Mongo with the following schema:
 
 ````json
 {
-  "\_id": "myID",
+  "_id": "myID",
   "t": "My Title",
   "c": "blah blah blah",
   "ts": [ "title" ],
@@ -59,7 +59,7 @@ It will then index the terms in a separate collection:
 
 ````json
 {
-  "\_id": "blah",
+  "_id": "blah",
   "e": [
     {
       "_id": "myID",
