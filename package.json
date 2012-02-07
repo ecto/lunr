@@ -9,11 +9,15 @@
   },
   "main": "lib/client/lunr.js",
   "engines": {
-    "node": "*"
+    "node": ">= 0.6.x"
   },
   "bin": {
     "lunrd": "bin/lunrd.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mongojs": "*",
+    "optimist": "*",
+    "request": "*"
+  },
   "devDependencies": {}
 }
