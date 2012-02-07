@@ -11,6 +11,9 @@
   "engines": {
     "node": "*"
   },
+  "bin": {
+    "lunrd": "bin/lunrd.js"
+  },
   "dependencies": {},
   "devDependencies": {}
 }
