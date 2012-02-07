@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/Lulo/lunr.git"
   },
-  "main": "lib/lunr.js",
+  "main": "lib/client/lunr.js",
   "engines": {
     "node": "*"
   },
