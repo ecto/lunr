@@ -38,6 +38,40 @@ All configuration is stored in `config.json`. This is the default configuration:
 
 ##How it works
 
+When a PUT command is issued against `lunrd`, it is put into a FIFO queue (stored in Redis).
+This allows Lunr nodes to be load balanced. Each will process keys as it is able too,
+responding to other commands first (GETs and DELETEs take precedence over PUTs).
+
+Every piece of content PUT into Lunr will be stemmed and subsequestly indexed.
+Lunr will store all documents in Mongo with the following schema:
+
+````json
+{
+  "\_id": "myID",
+  "t": "My Title",
+  "c": "blah blah blah",
+  "ts": [ "title" ],
+  "cs": [ "blah", "blah", "blah" ]
+}
+````
+
+It will then index the terms in a separate collection:
+
+````json
+{
+  "\_id": "blah",
+  "e": [
+    {
+      "_id": "myID",
+      "count": 3
+    }
+  ]
+}
+````
+
+If the `cache` config variable is set to `true`, GET requests will be cached to Redis -
+either for `ttl` milliseconds or 5 minutes.
+
 ##API
 
 ####GET /:id
