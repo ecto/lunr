@@ -129,4 +129,4 @@ client.similar('myID', console.log);
 
 ##License
 
-MIT Onswipe
+MIT
